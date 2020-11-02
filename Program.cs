@@ -14,11 +14,9 @@ namespace Read_Write_Data
             StreamWriter myOutputFile;  // create an instance (object) of StreamWriter
 
             // CreateText: Writes to a newly created textfile or opens & OVERWRITES the existing file.
-            // Saves the file in project's bin/debug/netcoreapp3.1 folder
-            myOutputFile = File.CreateText("Voto2020.txt");
-            // NOTE:
-            // You can use a complete path (versus the bin/debug/netcoreapp3.1 folder of the project) as shown below.
-            //myOutputFile = File.CreateText("C:\\Users\\Jose\\Desktop\\App_Data\\Voto 2020.txt");
+            myOutputFile = File.CreateText("C:\\Users\\Jose\\Desktop\\App_Data\\Voto2020.txt");
+            // Edit the above path according to your environment.
+            // Note: Rememeber, if no path is indicated the files are saved in the bin/debug/netcoreapp3.1
 
             // WriteLine is the counterpart of ReadLine
             myOutputFile.WriteLine("Pedro Pierluisi – PNP");  // similar to Console.WriteLine
@@ -39,7 +37,10 @@ namespace Read_Write_Data
             // EXAMPLE #2 *************************************************************************
             WriteLine("Example 2 -- Append lines of text to file with DELIMITER");
             // AppendText: Appends text to existing file, creates the file if it does not exist
-            StreamWriter myOutputFile2 = File.AppendText("GradesEx2.txt");
+            StreamWriter myOutputFile2 = File.AppendText("C:\\Users\\Jose\\Desktop\\App_Data\\GradesEx2.txt");
+            // Edit the above path according to your environment.
+            // Note: Rememeber, if no path is indicated the files are saved in the bin/debug/netcoreapp3.1
+
 
             // Write is the counterpart of Read
             const string DELIMITER = ", ";
@@ -79,7 +80,9 @@ namespace Read_Write_Data
             // EXAMPLE #3 *************************************************************************
             WriteLine("Example 3 -- Append lines of text to file without DELIMITER");            ///
             // AppendText: Appends text to existing file, creates the file if it does not exist
-            StreamWriter myOutputFile3 = File.AppendText("GradesEX3.txt");
+            StreamWriter myOutputFile3 = File.AppendText("C:\\Users\\Jose\\Desktop\\App_Data\\GradesEX3.txt");
+            // Edit the above path according to your environment.
+            // Note: Rememeber, if no path is indicated the files are saved in the bin/debug/netcoreapp3.1
 
             // WriteLine is the counterpart of ReadLine
             // The following statements outputs/writes each item on a separate line.
@@ -115,7 +118,9 @@ namespace Read_Write_Data
             string lineOfInput;
 
             StreamReader myInputFile;
-            myInputFile = File.OpenText("Voto2020.txt");
+            myInputFile = File.OpenText("C:\\Users\\Jose\\Desktop\\App_Data\\Voto2020.txt");
+            // Edit the above path according to your environment.
+            // Note: Rememeber, if no path is indicated the files are saved in the bin/debug/netcoreapp3.1
 
             // Read & Display first line of text
             lineOfInput = myInputFile.ReadLine();  // similar to Console.Readline()
@@ -153,7 +158,9 @@ namespace Read_Write_Data
             string lineOfInput2;
 
             StreamReader myInputFile2;
-            myInputFile2 = File.OpenText("GradesEx2.txt");
+            myInputFile2 = File.OpenText("C:\\Users\\Jose\\Desktop\\App_Data\\GradesEx2.txt");
+            // Edit the above path according to your environment.
+            // Note: Rememeber, if no path is indicated the files are saved in the bin/debug/netcoreapp3.1
 
             // Read & Display all lines of text
             while (!myInputFile2.EndOfStream)
@@ -170,7 +177,9 @@ namespace Read_Write_Data
             string lineOfInput3;
 
             StreamReader myInputFile3;
-            myInputFile3 = File.OpenText("GradesEx3.txt");
+            myInputFile3 = File.OpenText("C:\\Users\\Jose\\Desktop\\App_Data\\GradesEx3.txt");
+            // Edit the above path according to your environment.
+            // Note: Rememeber, if no path is indicated the files are saved in the bin/debug/netcoreapp3.1
 
             // Read & Display all lines of text
             while (!myInputFile3.EndOfStream)
